@@ -1,0 +1,13 @@
+<!-- Modal header -->
+<h2 mat-dialog-title>Parabéns!</h2>
+
+<!-- Modal content -->
+<mat-dialog-content class="mat-typography">
+    Você completou o jogo!<br>Seu tempo final: {{tempo.minuto}}:{{tempo.segundo}}
+</mat-dialog-content>
+
+<!-- Modal Buttons -->
+<mat-dialog-actions align="end" class="gap-10">
+    <button mat-stroked-button class="button-mode" [mat-dialog-close]="false">Voltar Para a Página Inicial</button>
+    <button mat-raised-button class="button-restart" [mat-dialog-close]="true" cdkFocusInitial>Embaralhar e Reiniciar</button>
+</mat-dialog-actions>

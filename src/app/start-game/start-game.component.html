@@ -1,0 +1,35 @@
+<!-- Start Menu -->
+<div class="page-content">
+  <h2 class="fw-bold">Bem vindo ao jogo da memória em Libras, o MemLibras</h2>
+
+  <!-- Buttons -->
+  <div class="mode-content">
+    <h3>Escolha um dos modos abaixo para começar:</h3>
+    <div class="mode-container">
+      <button class="btn" (click)="switchMode('vogal')"><div style="padding: 20px;">AEIOU</div>Vogais</button>
+      <button class="btn" (click)="switchMode('consoante')"><div style="padding: 20px;">BCDF...</div>Consoantes</button>
+      <button class="btn" (click)="switchMode('alfabeto')"><div style="padding: 20px;">ABC...</div> Alfabeto</button>
+      <button class="btn" (click)="showLetters(false)"><div style="padding: 20px;">A B C...</div>Escolha as Lretras</button>
+    </div>
+  </div>
+
+  <!-- Letters initially hidden -->
+  <div id="letras" hidden class="letter-container">
+    <div>
+      <h4 class="mt-30 fw-bold">Escolhas as letras que deseja adicionar ao jogo.</h4>
+    </div>
+
+    <!-- Checked buttons -->
+    <div class="button-container">
+      <div *ngFor="let letter of alphabet" class="d-flex">
+          <input type="checkbox" name="{{letter}}" id="{{letter}}" hidden>
+          <label for="{{letter}}" class="button-letter">{{letter}}</label>
+      </div>
+
+    <!-- Start game with selected letters -->
+      <button class="button-start" (click)="selectedLetters()"><span class="material-icons">play_arrow</span>Começar Jogo</button>
+    </div>
+
+  </div>
+
+</div>

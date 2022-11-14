@@ -9,10 +9,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - **cURL**: `sudo apt install curl`.
     - **NVM**: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash`.
     - **NodeJS**: `nvm install --lts`.
+    - **Angular CLI**: `npm install -g @angular/cli`.
 3. Run `git clone https://github.com/herlesonpontes/memlibras.git` to download source code. Access the root folder of the project.
-4. Install **Angular CLI** by running `npm install -g @angular/cli`.
+4. Install project modules by running `npm install`.
 5. Execute the project by running `ng serve`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+> If the global Angular version is higher than 10.0.8, some errors will arise. You can overcome then by running `npm install --force`. Also if a *digital envelope routines::initialization error* appear during the execution of the program, run `export NODE_OPTIONS=--openssl-legacy-provider` to bypass the deprecation warning.

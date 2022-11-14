@@ -1,0 +1,27 @@
+<!-- Top-bar -->
+<mat-toolbar class="top-bar">
+ MemLibras - Jogo da Memória da Libras
+</mat-toolbar>
+
+<!-- Start menu -->
+<div id="start-game">
+  <app-start-game [alphabet]="cardImagesAlphabet" (modeName)="switchMode($event)" (chosenLetters)="this.cardImagesSelected = $event"></app-start-game>
+</div>
+
+<!-- Game -->
+<div class="p-16" id="game" hidden>
+  <p class="text-center">Clique em uma carta para virar. Você só pode virar 2 (duas) cartas por rodada. Caso a letra e o sinal sejam os mesmos, as cartas ficarão cinzas!</p>
+
+  <!-- Switch mode and timer -->
+  <div class="menu-bar">
+    <button class="btn p-16" (click)="changeMode()">Mudar de modo</button>
+    <div class="temporizador"><span class="material-icons ft-10">timer</span> Tempo:&nbsp;&nbsp;<span id="minuto">00</span>:<span id="segundo">00</span></div>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid p-16" id="grid">
+    <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (click)="timerGame()" (cardClicked)="cardClicked(idx)">
+    </app-game-card>
+  </div>
+
+</div>
