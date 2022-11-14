@@ -18,4 +18,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-> If the global Angular version is higher than 10.0.8, some errors will arise. You can overcome then by running `npm install --force`. Also if a *digital envelope routines::initialization error* appear during the execution of the program, run `export NODE_OPTIONS=--openssl-legacy-provider` to bypass the deprecation warning.
+> If the global Angular version is higher than 10.0.8, some errors will arise. You can overcome then by running `npm install --force`. Also if a *digital envelope routines::initialization error* appear during the execution of the program, run `export NODE_OPTIONS=--openssl-legacy-provider` to bypass the deprecation warning. To run a `git push`, this variable must be unset with `unset NODE_OPTIONS`.
