@@ -10,12 +10,12 @@
 
 <!-- Game -->
 <div class="p-16" id="game" hidden>
-  <p class="text-center">Clique em uma carta para virar. Você só pode virar 2 (duas) cartas por rodada. Caso a letra e o sinal sejam os mesmos, as cartas ficarão cinzas!</p>
+  <p class="text-center">Clique em uma carta para virar. Você só pode virar 2 (duas) cartas por rodada. Caso a letra e o sinal sejam os mesmos, as cartas ficarão visíveis permanentemente!</p>
 
   <!-- Switch mode and timer -->
   <div class="menu-bar">
-    <button class="btn p-16" (click)="changeMode()">Mudar de modo</button>
-    <div class="temporizador"><span class="material-icons ft-10">timer</span> Tempo:&nbsp;&nbsp;<span id="minuto">00</span>:<span id="segundo">00</span></div>
+    <button class="btn p-16" (click)="changeMode()">Voltar para Início</button>
+    <button class="temporizador"><span class="material-icons ft-10">timer</span>&nbsp;&nbsp;Tempo:&nbsp;&nbsp;<span id="minuto">00</span>:<span id="segundo">00</span></button>
   </div>
 
   <!-- Cards -->

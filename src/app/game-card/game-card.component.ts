@@ -1,4 +1,4 @@
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CardData } from '../card-data.model';
 
@@ -19,7 +19,8 @@ import { CardData } from '../card-data.model';
         // transform: 'scale(0.05)',
         // opacity: 0
         cursor: 'default',
-        filter: 'grayscale(100%)'
+        transform: 'perspective(600px) rotateY(180deg)', 
+        boxShadow: '0px 0px 3px 3px #00ff00'
       })),
       transition('default => flipped', [
         animate('400ms')
@@ -28,7 +29,12 @@ import { CardData } from '../card-data.model';
         animate('400ms')
       ]),
       transition('* => matched', [
-        animate('400ms')
+        animate('400ms', keyframes([
+            style({ transform: 'scale(1.00) perspective(600px) rotateY(180deg)', boxShadow: '0px 0px 3px 3px #00ff00' }),  
+            style({ transform: 'scale(0.75) perspective(600px) rotateY(180deg)', boxShadow: '0px 0px 3px 3px #00ff00' }),
+            style({ transform: 'scale(1.00) perspective(600px) rotateY(180deg)', boxShadow: '0px 0px 3px 3px #00ff00' }),
+          ])
+        )
       ])
     ])
   ]
